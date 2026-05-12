@@ -116,7 +116,7 @@ export default function FriendDetails() {
             <div className="grid md:grid-cols-3 gap-4">
               <div className="card bg-white shadow-sm">
                 <div className="card-body text-center">
-                  <h2 className="text-3xl font-bold text-green-700">
+                  <h2 className="text-3xl font-bold text-black">
                     {friend.days_since_contact}
                   </h2>
                   <p className="text-gray-500 text-sm">Days Since Contact</p>
@@ -125,7 +125,7 @@ export default function FriendDetails() {
 
               <div className="card bg-white shadow-sm">
                 <div className="card-body text-center">
-                  <h2 className="text-3xl font-bold text-green-700">
+                  <h2 className="text-3xl font-bold text-black">
                     {friend.goal}
                   </h2>
                   <p className="text-gray-500 text-sm">Goal (Days)</p>
@@ -134,7 +134,7 @@ export default function FriendDetails() {
 
               <div className="card bg-white shadow-sm">
                 <div className="card-body text-center">
-                  <h2 className="text-2xl font-bold text-green-700">
+                  <h2 className="text-2xl font-bold text-black">
                     {friend.next_due_date}
                   </h2>
                   <p className="text-gray-500 text-sm">Next Due</p>
@@ -144,7 +144,7 @@ export default function FriendDetails() {
 
             <div className="card bg-white shadow-sm">
               <div className="card-body flex flex-row justify-between items-center">
-                <div>
+                <div className="py-4">
                   <h3 className="font-semibold">Relationship Goal</h3>
                   <p className="text-gray-500">
                     Connect every <span className="font-bold">{friend.goal} days</span>

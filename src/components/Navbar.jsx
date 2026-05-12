@@ -49,13 +49,13 @@ const Navbar = () => {
            {links}
           </ul>
         </div>
-        <Image 
+        <Link href={'/'}><Image 
           src={keenImage}
           alt="Company logo"
           width={100}
           height={300}
           
-        ></Image>
+        ></Image></Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
