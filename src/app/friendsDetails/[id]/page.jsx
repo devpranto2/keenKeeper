@@ -8,6 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import callIcon from '../../../../assets/call.png';
 import textIcon from '../../../../assets/text.png';
 import videoIcon from '../../../../assets/video.png';
+import { MdDelete } from "react-icons/md";
+import { FaBoxArchive } from "react-icons/fa6";
+import { HiMiniBellSnooze } from "react-icons/hi2";
 
 export default function FriendDetails() {
   const { id } = useParams();
@@ -99,15 +102,15 @@ export default function FriendDetails() {
             </div>
 
             <button className="btn w-full bg-white border shadow-sm">
-              Snooze 2 Weeks
+             <HiMiniBellSnooze /> Snooze 2 Weeks
             </button>
 
             <button className="btn w-full bg-white border shadow-sm">
-              Archive
+             <FaBoxArchive /> Archive
             </button>
 
             <button className="btn w-full bg-white border shadow-sm text-red-500">
-              Delete
+             <MdDelete /> Delete
             </button>
           </div>
 
