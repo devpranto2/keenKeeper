@@ -8,12 +8,30 @@ import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   const [friends, setFriends] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('/friendsData.json')
       .then(res => res.json())
-      .then(data => setFriends(data));
+      .then(data => {
+        setFriends(data);
+        setLoading(false);
+      });
   }, []);
+
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
+        <div className="text-center">
+        
+          <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-[#1f5b4a] border-t-transparent"></div>
+          <p className="mt-4 text-gray-500 font-medium">Loading friends...</p>
+          <p className="text-sm text-gray-400 mt-2">Please wait while we fetch your connections</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="">
@@ -84,65 +102,59 @@ export default function Home() {
             My Friends ({friends.length})
           </h2>
 
-          {friends.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-gray-500">Loading friends...</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {friends.map(friend => (
-                <Link
-                  href={`/friendsDetails/${friend.id}`}
-                  key={friend.id}
-                  className="card bg-white shadow-md rounded-xl border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-1 duration-300"
-                >
-                  <div className="card-body items-center text-center py-8">
-                    <div className="avatar">
-                      <div className="w-24 rounded-full">
-                        <Image
-                          src={friend.picture}
-                          alt={friend.name}
-                          width={96}
-                          height={96}
-                          className="rounded-full"
-                        />
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {friends.map(friend => (
+              <Link
+                href={`/friendsDetails/${friend.id}`}
+                key={friend.id}
+                className="card bg-white shadow-md rounded-xl border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-1 duration-300"
+              >
+                <div className="card-body items-center text-center py-8">
+                  <div className="avatar">
+                    <div className="w-24 rounded-full">
+                      <Image
+                        src={friend.picture}
+                        alt={friend.name}
+                        width={96}
+                        height={96}
+                        className="rounded-full"
+                      />
                     </div>
-
-                    <h3 className="text-2xl font-bold mt-4">
-                      {friend.name}
-                    </h3>
-
-                    <p className="text-gray-400 text-sm">
-                      {friend.days_since_contact}d ago
-                    </p>
-
-                    <div className="badge badge-success text-white mt-3">
-                      {friend.tags[0]}
-                    </div>
-
-                    {friend.status === 'overdue' && (
-                      <div className="badge badge-error mt-4 text-white">
-                        {friend.status}
-                      </div>
-                    )}
-
-                    {friend.status === 'almost due' && (
-                      <div className="badge badge-warning mt-4 text-white">
-                        {friend.status}
-                      </div>
-                    )}
-
-                    {friend.status === 'on-track' && (
-                      <div className="badge badge-success mt-4 text-white">
-                        {friend.status}
-                      </div>
-                    )}
                   </div>
-                </Link>
-              ))}
-            </div>
-          )}
+
+                  <h3 className="text-2xl font-bold mt-4">
+                    {friend.name}
+                  </h3>
+
+                  <p className="text-gray-400 text-sm">
+                    {friend.days_since_contact}d ago
+                  </p>
+
+                  <div className="badge badge-success text-white mt-3">
+                    {friend.tags[0]}
+                  </div>
+
+                  {friend.status === 'overdue' && (
+                    <div className="badge badge-error mt-4 text-white">
+                      {friend.status}
+                    </div>
+                  )}
+
+                  {friend.status === 'almost due' && (
+                    <div className="badge badge-warning mt-4 text-white">
+                      {friend.status}
+                    </div>
+                  )}
+
+                  {friend.status === 'on-track' && (
+                    <div className="badge badge-success mt-4 text-white">
+                      {friend.status}
+                    </div>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
         <ToastContainer />

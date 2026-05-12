@@ -45,7 +45,11 @@ export default function FriendDetails() {
     window.dispatchEvent(new Event('interactionAdded'));
     
     // Show toast
-    toast.success(`${type} with ${friend.name} logged!`);
+    toast.success(
+  <div>
+    {type} with <strong>{friend.name}</strong>
+  </div>
+);
   };
 
   if (!friend) {
@@ -55,7 +59,7 @@ export default function FriendDetails() {
   return (
     <>
       <ToastContainer 
-        position="top-right"
+        position="top-center"
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
