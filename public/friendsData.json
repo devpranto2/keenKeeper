@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Ariana Mitchell",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "ariana.mitchell@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met during computer science classes in university. We used to study together before exams and still talk about tech careers.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Daniel Carter",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "daniel.carter@yahoo.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["work", "mentor"],
+    "bio": "Former team lead from my internship who gives practical advice about software engineering and career growth.",
+    "goal": 14,
+    "next_due_date": "2025-07-25"
+  },
+  {
+    "id": 3,
+    "name": "Sophia Reynolds",
+    "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "email": "sophia.reynolds@gmail.com",
+    "days_since_contact": 4,
+    "status": "on-track",
+    "tags": ["gym", "fitness buddy"],
+    "bio": "We met at the local gym and often motivate each other to stay consistent with workouts and healthy habits.",
+    "goal": 10,
+    "next_due_date": "2025-07-30"
+  },
+  {
+    "id": 4,
+    "name": "Michael Bennett",
+    "picture": "https://randomuser.me/api/portraits/men/51.jpg",
+    "email": "michael.bennett@outlook.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": ["school", "old friend"],
+    "bio": "School friend from childhood. We played cricket together every weekend and still catch up occasionally.",
+    "goal": 21,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 5,
+    "name": "Emma Collins",
+    "picture": "https://randomuser.me/api/portraits/women/28.jpg",
+    "email": "emma.collins@gmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": ["book club", "creative"],
+    "bio": "Friend from a local reading group. We exchange book recommendations and discuss novels over coffee.",
+    "goal": 14,
+    "next_due_date": "2025-07-28"
+  },
+  {
+    "id": 6,
+    "name": "Ryan Foster",
+    "picture": "https://randomuser.me/api/portraits/men/74.jpg",
+    "email": "ryan.foster@hotmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["travel", "adventure"],
+    "bio": "Met during a backpacking trip. We still share travel plans and destination ideas whenever possible.",
+    "goal": 14,
+    "next_due_date": "2025-07-23"
+  },
+  {
+    "id": 7,
+    "name": "Natalie Brooks",
+    "picture": "https://randomuser.me/api/portraits/women/56.jpg",
+    "email": "natalie.brooks@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["neighbor", "family friend"],
+    "bio": "Lives nearby and often joins family gatherings. Always checks in during holidays and celebrations.",
+    "goal": 14,
+    "next_due_date": "2025-08-01"
+  },
+  {
+    "id": 8,
+    "name": "Jacob Turner",
+    "picture": "https://randomuser.me/api/portraits/men/19.jpg",
+    "email": "jacob.turner@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["startup", "networking"],
+    "bio": "Connected through a startup meetup. We discuss product ideas, tech trends, and entrepreneurship.",
+    "goal": 14,
+    "next_due_date": "2025-07-19"
+  }
+]
