@@ -181,12 +181,9 @@ export default function TimelinePage() {
                   </div>
 
                   <div className="text-gray-900">
-                    {getInteractionText(
-                      interaction.type,
-                      interaction.friendData.name
-                    )}
+                    <strong className="font-bold">{interaction.type}</strong> with {interaction.friendData.name}
                   </div>
-                </div>
+                 </div>
               </div>
             ))}
           </div>

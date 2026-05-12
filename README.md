@@ -7,13 +7,15 @@
 A web application that helps you track and nurture your friendships by logging calls, texts, and video interactions. Never lose touch with people who matter most.
 
 ## Technologies Used
-- Next.js 16
-- React 19
+- Next.js
+- React
+- JavaScript
 - Tailwind CSS
 - DaisyUI
 - React Toastify
+- React Icons
 - Recharts
-- Session Storage
+
 
 ## Key Features
 
